@@ -1,14 +1,13 @@
 package com.builtbroken.bonetorch;
 
 import com.builtbroken.bonetorch.torch.BlockBoneTorch;
-import com.builtbroken.bonetorch.torch.ItemBlockBoneTorch;
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
 /**
@@ -30,7 +29,9 @@ public class BoneTorchMod
     {
         blockTorch = new BlockBoneTorch();
         //TODO add bone sound type
-        GameRegistry.registerBlock(blockTorch, ItemBlockBoneTorch.class, "BTBoneTorch");
+        //GameRegistry.registerBlock(blockTorch, BlockBoneTorch.class, "BTBoneTorch");
+        GameRegistry.registerBlock(blockTorch, "BTBoneTorch");
+
     }
 
     @Mod.EventHandler
